@@ -11,15 +11,25 @@
   // --------------------------------------------------------
   // Colors (Branding Core)
   // --------------------------------------------------------
-  --fs-color-main-2                                     : #0366dd;
-  --fs-color-main-3                                     : #0155b7;
-  --fs-color-main-4                                     : #014592;
+  // Negro como color principal (botones, enlaces) y un solo acento para ofertas
+  --fs-color-main-0                                     : #efede7;
+  --fs-color-main-1                                     : #dcd9d0;
+  --fs-color-main-2                                     : #1b1b1b;
+  --fs-color-main-3                                     : #000000;
+  --fs-color-main-4                                     : #2e2e2e;
 
-  --fs-color-success-bkg                                : #e9fce3;
-  --fs-color-warning-bkg                                : #e9fce3;
-  --fs-color-danger-bkg                                 : #f7d1d1;
+  --store-color-sale                                    : #d6401a;
+  --store-color-sale-bkg                                : #fbe7e0;
+
+  --fs-color-body-bkg                                   : #f7f6f2;
+  --fs-color-neutral-bkg                                : #efede7;
+
+  --fs-color-success-bkg                                : #e7f1e4;
+  --fs-color-warning-bkg                                : #fbf0d9;
+  --fs-color-danger-bkg                                 : #f7d8d1;
 
   --fs-color-primary-bkg-light                          : var(--fs-color-neutral-0);
+  --fs-color-highlighted-bkg                            : var(--fs-color-main-0);
 
   // --------------------------------------------------------
   // Typography (Branding Core)
@@ -27,10 +37,11 @@
 
   // WEIGHT
   --fs-text-weight-bold                                 : 600;
-  --fs-text-weight-black                                : 700;
+  --fs-text-weight-black                                : 800;
 
   // FACE
-  --fs-text-face-body                                   : "Inter", -apple-system, system-ui, BlinkMacSystemFont, sans-serif;
+  --fs-text-face-body                                   : "Archivo", -apple-system, system-ui, BlinkMacSystemFont, sans-serif;
+  --fs-text-face-title                                  : "Archivo", -apple-system, system-ui, BlinkMacSystemFont, sans-serif;
 
   // HIERARCHY SCALE
   --fs-text-size-title-huge                             : var(--fs-text-size-9);
@@ -63,7 +74,7 @@
   // BORDERS
   --fs-border-color                                     : var(--fs-color-neutral-2);
 
-  --fs-border-radius                                    : 4px;
+  --fs-border-radius                                    : 3px;
 
   // --------------------------------------------------------
   // FS UI Components
@@ -77,7 +88,7 @@
     [data-fs-button] {
       --fs-button-padding                               : calc(var(--fs-spacing-1) - (var(--fs-button-border-width) * 2)) var(--fs-spacing-4);
 
-      --fs-button-border-radius                         : var(--fs-border-radius-pill);
+      --fs-button-border-radius                         : var(--fs-border-radius);
       --fs-button-border-width                          : var(--fs-border-width);
 
       --fs-buy-button-bkg-color                         : var(--fs-button-primary-bkg-color);
@@ -115,7 +126,7 @@
     }
 
     [data-fs-quantity-selector] {
-      --fs-qty-selector-border-radius                   : var(--fs-border-radius-pill);
+      --fs-qty-selector-border-radius                   : var(--fs-border-radius);
     }
 
     [data-fs-navbar-header] {
@@ -135,7 +146,7 @@
     }
 
     [data-fs-alert] {
-      --fs-alert-bkg-color                              : var(--fs-color-neutral-7);
+      --fs-alert-bkg-color                              : #111111;
       --fs-alert-text-color                             : var(--fs-color-text-inverse);
     }
 
@@ -178,6 +189,15 @@
     ////////////////////
     // HOMEPAGE
     ////////////////////
+
+    // Títulos más compactos y con peso, como en una tienda de retail
+    [data-fs-product-shelf] h2,
+    [data-fs-product-tiles] h2,
+    [data-fs-tiles] h2,
+    [data-fs-hero-title] {
+      font-weight: var(--fs-text-weight-black);
+      letter-spacing: -0.02em;
+    }
 
     [data-fs-hero] {
       @include u.layout-content;

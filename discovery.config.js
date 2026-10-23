@@ -3,10 +3,10 @@ module.exports = {
     type: 'CP',
   },
   seo: {
-    title: "FastStore",
-    description: "A fast and performant store framework",
-    titleTemplate: "%s | FastStore",
-    author: "FastStore",
+    title: "FastStore Demo",
+    description: "Tienda de demostración en VTEX FastStore con regionalizador y multimoneda",
+    titleTemplate: "%s | FastStore Demo",
+    author: "Hevert Gelis",
   },
 
   // Theming

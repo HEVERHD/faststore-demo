@@ -1,0 +1,40 @@
+.card {
+  position: relative;
+  background: transparent;
+
+  [data-fs-product-card-image] {
+    position: relative;
+  }
+
+  [data-fs-product-card-title] {
+    font-weight: var(--fs-text-weight-medium, 500);
+  }
+
+  [data-fs-price][data-variant="spot"] {
+    font-weight: var(--fs-text-weight-bold);
+  }
+}
+
+.badge {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 3px 8px;
+  background: var(--store-color-sale);
+  color: var(--fs-color-text-inverse);
+  font-size: var(--fs-text-size-tiny);
+  font-weight: var(--fs-text-weight-bold);
+  letter-spacing: 0.02em;
+}
+
+.note {
+  font-size: var(--fs-text-size-tiny);
+  color: var(--fs-color-text-light);
+}
+
+.savings {
+  margin-top: var(--fs-spacing-0);
+  color: var(--store-color-sale);
+  font-size: var(--fs-text-size-tiny);
+  font-weight: var(--fs-text-weight-semibold);
+}
